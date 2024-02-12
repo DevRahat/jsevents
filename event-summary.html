@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Dom Summary</title>
+</head>
+<body>
+    <h1>Final DOM Events Handlers</h1>
+    <p>Input Text</p>
+    <input type="text">
+    <button>Update</button>
+    <br>
+    <h3 id="handler-status">Default Text</h3>
+    <button onclick="handleOnClick()">Handle Event by Add Onclick Function</button>
+    <button id="event-listner">handle Event by AddeventLsitner</button>
+    <script>
+        function handleOnClick(){
+            const handleStatus=document.getElementById('handler-status');
+            handleStatus.innerText="Text has been changed";
+        }
+        // option 2
+        document.getElementById('event-listner').addEventListener('click',function(){
+            const handleStatus=document.getElementById('handler-status');
+            handleStatus.innerText='Text updated';
+        })
+
+    </script>
+</body>
+</html>
