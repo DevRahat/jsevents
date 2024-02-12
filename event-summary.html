@@ -7,9 +7,9 @@
 </head>
 <body>
     <h1>Final DOM Events Handlers</h1>
-    <p>Input Text</p>
-    <input type="text">
-    <button>Update</button>
+    <p id="input-text-display">Input Text</p>
+    <input id="input-field" type="text">
+    <button id="btn-update">Update</button>
     <br>
     <h3 id="handler-status">Default Text</h3>
     <button onclick="handleOnClick()">Handle Event by Add Onclick Function</button>
@@ -25,6 +25,13 @@
             handleStatus.innerText='Text updated';
         })
 
+        document.getElementById('btn-update').addEventListener('click', function(){
+            const inputField=document.getElementById('input-field');
+            const inputText=inputField.value;
+            const p=document.getElementById('input-text-display');
+            p.innerText=inputText;
+            inputField.value='';
+        })
     </script>
 </body>
 </html>
